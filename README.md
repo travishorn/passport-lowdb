@@ -27,9 +27,9 @@ npm install
 Set environment variables. You can set them manually or create a `.env` file.
 
 ```bash
-KEY_LEN=64 # Key length for password hashing using scrypt
-PORT=3000 # Port that web server will listen on
-SALT_LEN=64 # Salt length for password hashing using scrypt
+KEY_LEN=64            # Key length for password hashing using scrypt
+PORT=3000             # Port that web server will listen on
+SALT_LEN=64           # Salt length for password hashing using scrypt
 SESSION_SECRET=secret # Secret used to sign the session ID cookie
 ```
 
