@@ -1,0 +1,26 @@
+extends ../layout
+
+block variables 
+  - var pageTitle = "Sign up"
+
+block body
+  .row
+    .col-md-3.mx-auto
+      form(method="post")
+        .mb-3
+          label.form-label(for="username") Username
+          input#username.form-control(name="username" autofocus required)
+
+        .mb-3
+          label.form-label(for="password") Password
+          input#password.form-control(name="password" type="password" required)
+
+        .mb-3
+          label.form-label(for="retypePassword") Re-type password
+          input#retypePassword.form-control(
+            name="retypePassword"
+            type="password"
+            required
+          )
+
+        button.btn.btn-primary Sign up

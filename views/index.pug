@@ -8,6 +8,7 @@ block body
 
   if !user
     a.btn.btn-secondary.mx-1(href="/user/log-in") Log in
+    a.btn.btn-secondary.mx-1(href="/user/sign-up") Sign up
   else
     form(action="/user/log-out" method="post")
       button.btn.btn-secondary.mx-1 Log out
