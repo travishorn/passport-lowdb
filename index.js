@@ -47,5 +47,5 @@ app.use((err, req, res, next) => {
 });
 
 app.listen(port, () => {
-  console.log(`JSON Passport server listening at http://localhost:${port}`);
+  console.log(`Passport.js lowdb server listening at http://localhost:${port}`);
 });
