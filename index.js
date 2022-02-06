@@ -4,6 +4,9 @@ import cookieParser from "cookie-parser";
 import createError from "http-errors";
 import passport from "passport";
 import session from "express-session";
+import lowdbStore from "connect-lowdb";
+
+import db from "./db.js";
 
 import indexRoute from "./routes/index.js";
 import userRoute from "./routes/user.js";
@@ -11,6 +14,8 @@ import userRoute from "./routes/user.js";
 const port = process.env.PORT || 3000;
 
 const app = express();
+
+const LowdbStore = lowdbStore(session);
 
 app.set("view engine", "pug");
 
@@ -21,6 +26,7 @@ app.use(session({
   secret: process.env.SESSION_SECRET || "secret",
   resave: false,
   saveUninitialized: false,
+  store: new LowdbStore({ db }),
 }));
 
 app.use(passport.authenticate("session"));
