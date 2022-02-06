@@ -1,0 +1,18 @@
+extends ../layout
+
+block variables 
+  - var pageTitle = "Log in"
+
+block body
+  .row
+    .col-md-3.mx-auto
+      form(method="post")
+        .mb-3
+          label.form-label(for="username") Username
+          input#username.form-control(name="username" autofocus required)
+
+        .mb-3
+          label.form-label(for="password") Password
+          input#password.form-control(name="password" type="password" required)
+
+        button.btn.btn-primary Log in

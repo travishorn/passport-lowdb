@@ -1,0 +1,13 @@
+extends layout
+
+block variables 
+  - var pageTitle = "Home"
+
+block body
+  p Hello, World!
+
+  if !user
+    a.btn.btn-secondary.mx-1(href="/user/log-in") Log in
+  else
+    form(action="/user/log-out" method="post")
+      button.btn.btn-secondary.mx-1 Log out
